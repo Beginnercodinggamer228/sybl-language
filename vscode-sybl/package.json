@@ -1,0 +1,25 @@
+{
+    "name": "sybl-language",
+    "displayName": "SyBL Symbol Programming Language",
+    "description": "Syntax highlighting and language support for SyBL (Symbol Language) - a unique interpreted programming language with symbolic syntax",
+    "version": "1.1.0",
+    "publisher": "GenkaMistikToCoder",
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": ["Programming Languages"],
+    "keywords": ["sybl", "programming", "language", "interpreter"],
+    "contributes": {
+        "languages": [{
+            "id": "sybl",
+            "aliases": ["SyBL", "sybl"],
+            "extensions": [".syb", ".sybl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "sybl",
+            "scopeName": "source.sybl",
+            "path": "./syntaxes/sybl.tmLanguage.json"
+        }]
+    }
+}

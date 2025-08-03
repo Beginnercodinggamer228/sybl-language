@@ -1,0 +1,16 @@
+;: Hello World example for SyBL
+>_ "Hello, World!"
+
+;: Variables demo
+name =#= "Programmer"
+age =$= 25
+
+>_ "Hello, $%name%!"
+>_ "You are $%age% years old"
+
+;: Simple math
+a =$= 10
+b =$= 3
+result =$= a + b
+
+>_ "$%a% + $%b% = $%result%"

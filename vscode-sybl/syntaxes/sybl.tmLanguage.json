@@ -1,0 +1,138 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "SyBL",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#encoding"
+        },
+        {
+            "include": "#output"
+        },
+        {
+            "include": "#variables"
+        },
+        {
+            "include": "#arithmetic"
+        },
+        {
+            "include": "#conditions"
+        },
+        {
+            "include": "#loops"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#variable-reference"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.sybl",
+                    "match": ";:.*$"
+                }
+            ]
+        },
+        "encoding": {
+            "patterns": [
+                {
+                    "name": "keyword.control.encoding.sybl",
+                    "match": "!=\\(\\d+\\)=!"
+                }
+            ]
+        },
+        "output": {
+            "patterns": [
+                {
+                    "name": "keyword.control.output.sybl",
+                    "match": ">_"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "storage.type.sybl",
+                    "match": "=\\$=|=\\$\\.\\$=|=#=|=&="
+                }
+            ]
+        },
+        "arithmetic": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.arithmetic.sybl",
+                    "match": "[+\\-*/]"
+                }
+            ]
+        },
+        "conditions": {
+            "patterns": [
+                {
+                    "name": "keyword.control.conditional.sybl",
+                    "match": "\\?\\([^)]*\\)\\?|\\?end\\?"
+                },
+                {
+                    "name": "keyword.operator.comparison.sybl",
+                    "match": "==|!=|>=|<=|>|<"
+                }
+            ]
+        },
+        "loops": {
+            "patterns": [
+                {
+                    "name": "keyword.control.loop.sybl",
+                    "match": "@\\([^)]*\\)@|@end@"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.sybl",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "include": "#variable-reference"
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.sybl",
+                    "begin": "'",
+                    "end": "'"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.float.sybl",
+                    "match": "-?\\d+\\.\\d+"
+                },
+                {
+                    "name": "constant.numeric.integer.sybl",
+                    "match": "-?\\d+"
+                }
+            ]
+        },
+        "variable-reference": {
+            "patterns": [
+                {
+                    "name": "variable.other.sybl",
+                    "match": "\\$%[\\w\\u0400-\\u04FF]+%"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.sybl"
+}
