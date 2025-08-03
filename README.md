@@ -5,7 +5,7 @@ Simple interpreted programming language with unique symbolic syntax.
 ## 📥 Download & Install
 
 ### Windows
-1. **Download:** [sybl-windows.zip](https://github.com/your-username/sybl-language/releases/latest)
+1. **Download:** [sybl-windows.zip](https://github.com/Beginnercodinggamer228/sybl-language/blob/main/sybl-windows.zip)
 2. **Extract** to any folder (e.g., `C:\SyBL\`)
 3. **Install:** Double-click `install.reg` 
 4. **Done!** Now `.syb` files run with double-click
